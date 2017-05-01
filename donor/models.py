@@ -9,7 +9,7 @@ from django.dispatch import receiver
 # Create your models here.
 class Donor(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE,default='')
-	name = models.CharField(max_length=15, null=False, default="one")
+	name = models.CharField(max_length=15, null=True,)
 	blood = models.ForeignKey(Blood, null=True)
 	district = models.ForeignKey(District, null=True)
 	address = models.TextField(null=True)
