@@ -1,0 +1,28 @@
+{% extends "rrcbase.html" %}
+
+{% block content %}
+
+
+        	<h3><a href="create/ "class="btn btn-large btn-info">Post a Camp</a></h1><br><br>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+    	{% for camp in list %}	
+      	{%if camp.user == request.user%}<tr>
+        	<td><a href="/camp/{{camp.id}}">{{camp.name}}</a></td>
+        	<td>{{camp.date}}</td>
+        	<td><a href="edit/{{camp.id}} "class="btn btn-large btn-info">Edit</a></h1><br><br></td>
+        	<td><a href="delete/{{camp.id}} "class="btn btn-large btn-info">Delete</a></h1><br><br></td>
+      	</tr>
+      	{%endif%}
+      	{% endfor%}
+    </tbody>
+  </table>
+	
+{% endblock content %}

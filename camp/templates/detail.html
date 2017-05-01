@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+
+
+
+{% block content %}
+{% for camp in list %}  
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+        <th>Nameffff</th>
+        <th>{{camp.name}}</th>
+        <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+    	<tr>
+        <td>District</td>
+        <td>{{camp.district}}</td>
+      </tr>
+        <tr>
+        <td>RRC</td>
+        <td>{{camp.user}}</td>
+      </tr>
+      <tr>
+        <td>Date</td>
+        <td>{{camp.date}}</td>
+      </tr>
+      <tr>
+        <td>RRC</td>
+        <td>{{camp.rrc}}</td>
+      </tr>  
+      <tr>
+        <td>Address</td>
+        <td>{{camp.address}}</td>
+      </tr>
+      <tr>
+        <td>Contact</td>
+        <td>{{camp.contact}}</td>
+      </tr>
+
+    </tbody>
+</table>
+{% endfor%}
+
+
+	
+{% endblock content %}

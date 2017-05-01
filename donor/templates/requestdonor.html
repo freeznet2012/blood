@@ -1,0 +1,25 @@
+{%extends 'donorbase.html' %}
+
+{% block content %}
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Blood</th>
+        <th>District</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+    	{% for request in list %}	
+      	<tr>
+        	<td><a href="/request/{{request.id}}">{{request.name}}</a></td>
+        	<td>{{request.blood}}</td>
+          <td>{{request.district}}</td>
+        	<td>{{request.date_of_request}}</td>
+      	</tr>
+      	{% endfor%}
+    </tbody>
+  </table>
+{% endblock %}

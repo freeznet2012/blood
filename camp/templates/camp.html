@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>District</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+    	{% for camp in list %}	
+      	<tr>
+        	<td><a href="/camp/{{camp.id}}">{{camp.name}}</a></td>
+        	<td>{{camp.district}}</td>
+        	<td>{{camp.date}}</td>
+      	</tr>
+      	{% endfor%}
+    </tbody>
+  </table>
+
+	
+{% endblock content %}

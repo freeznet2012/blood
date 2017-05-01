@@ -1,0 +1,53 @@
+
+{% extends "base.html" %}
+
+
+
+{% block content %}
+{% for request in list %}  
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+        <th>Name</th>
+        <th>{{request.name}}</th>
+        <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+    	<tr>
+        <td>District</td>
+        <td>{{request.district}}</td>
+      </tr>
+      <tr>
+        <td>Blood</td>
+        <td>{{request.blood}}</td>
+      </tr>
+      <tr>
+        <td>Contact</td>
+        <td>{{request.contact}}</td>
+      </tr>  
+      <tr>
+        <td>units</td>
+        <td>{{request.units}}</td>
+      </tr>
+      <tr>
+        <td>Needed on </td>
+        <td>{{request.date_of_request}}</td>
+      </tr>
+      <tr>
+        <td>Particulars</td>
+        <td>{{request.particulars}}</td>
+      </tr>
+      <tr>
+        <td>Dte of Post</td>
+        <td>{{request.date_create}}</td>
+      </tr>
+    </tbody>
+</table>
+{% endfor%}
+
+
+	
+{% endblock content %}

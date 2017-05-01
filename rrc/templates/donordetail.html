@@ -1,0 +1,56 @@
+{%extends "donorbase.html" %}
+
+{% block content %}
+
+{% for donor in list %}  
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+        <th>Name</th>
+        <th>{{donor.name}}</th>
+        <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+    	<tr>
+        <td>Blood</td>
+        <td>{{donor.blood}}</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>{{donor.address}}</td>
+      </tr>
+      <tr>
+        <td>Contact</td>
+        <td>{{donor.contact}}</td>
+      </tr>
+<td>District</td>
+        <td>{{donor.district}}</td>
+      </tr>
+      <tr>
+        <td>Pincode</td>
+        <td>{{donor.pincode}}</td>
+      </tr>
+      <tr>
+        <td>Weight</td>
+        <td>{{donor.weight}}</td>
+      </tr>
+<td>Date of Birth</td>
+        <td>{{donor.dob}}</td>
+      </tr>
+      <tr>
+        <td>Last Donated</td>
+        <td>{{donor.last_donated}}</td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td>{{donor.gender}}</td>
+      </tr>
+
+    </tbody>
+</table>
+{% endfor%}
+
+{% endblock content %}
