@@ -9,11 +9,11 @@ from datetime import datetime, timedelta
 def home(request):
 	user = request.user
 	if request.method == "POST":
-			uform = UserForm(request.POST)
+			#uform = UserForm(request.POST)
 			pform = DonorProfileForm(request.POST)
-			if uform.is_valid() and pform.is_valid():
-				user.username = uform.cleaned_data['username']
-				user.email = uform.cleaned_data['email']
+			if pform.is_valid():
+				#user.username = uform.cleaned_data['username']
+				#user.email = uform.cleaned_data['email']
 				
 				user.donor.name = pform.cleaned_data['name']
 				user.donor.blood = pform.cleaned_data['blood']

@@ -3,10 +3,10 @@ from blood.models import Blood
 from address.models import District
 # Create your models here.
 class Request(models.Model):
-	name = models.CharField(max_length=30)
-	contact = models.CharField(max_length=25)
+	name = models.CharField(max_length=30, null=False)
+	contact = models.CharField(max_length=25, null=False)
 	blood = models.ForeignKey(Blood)
-	district = models.ForeignKey(District, null=True)
+	district = models.ForeignKey(District, null=False,default='')
 	particulars = models.TextField(null=True)
 	units = models.IntegerField()
 	date_create = models.DateTimeField(auto_now=True)

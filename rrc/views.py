@@ -26,11 +26,11 @@ def detail(request, rrc_id):
 def home(request):
 	user = request.user
 	if request.method == "POST":
-			uform = UserForm(request.POST)
+			#uform = UserForm(request.POST)
 			pform = RrcProfileForm(request.POST)
-			if uform.is_valid() and pform.is_valid():
-				user.username = uform.cleaned_data['username']
-				user.email = uform.cleaned_data['email']
+			if pform.is_valid():
+				#user.username = uform.cleaned_data['username']
+				#user.email = uform.cleaned_data['email']
 				
 				user.rrc.name = pform.cleaned_data['name']
 				user.rrc.district = pform.cleaned_data['district']

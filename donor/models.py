@@ -9,17 +9,17 @@ from django.dispatch import receiver
 # Create your models here.
 class Donor(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE,default='')
-	name = models.CharField(max_length=15, null=True,)
-	blood = models.ForeignKey(Blood, null=True)
-	district = models.ForeignKey(District, null=True)
+	name = models.CharField(max_length=15, null=False,default='')
+	blood = models.ForeignKey(Blood, null=False,default='')
+	district = models.ForeignKey(District, null=False,default='')
 	address = models.TextField(null=True)
 	pincode = models.IntegerField(null=True)
-	contact = models.CharField(max_length=25, null=True)
+	contact = models.CharField(max_length=25, null=False,default='')
 	weight = models.IntegerField(null=True)
 	dob = models.DateField(null=True)
 	last_donated = models.DateField(null=True)
 	GENDER_CHOICES = (('M', 'Male'),('F', 'Female'),)
-	gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=True)
+	gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=False,default='')
 
 	def __str__(self):
 		return str(self.user)

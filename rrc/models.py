@@ -7,10 +7,10 @@ from django.dispatch import receiver
 # Create your models here.
 class Rrc(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE,default='')
-	name = models.CharField(max_length=15, null=False)
+	name = models.CharField(max_length=15, null=False,default='')
 	address = models.TextField(blank=True)
-	district = models.ForeignKey(District, null=True)
-	contact = models.CharField(max_length=25, null=False)
+	district = models.ForeignKey(District, null=False,default='')
+	contact = models.CharField(max_length=25, null=False,default='')
 
 	def __str__(self):
 		return self.name+' ----- '+str(self.district)
