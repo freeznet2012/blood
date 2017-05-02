@@ -4,15 +4,84 @@
 
 <div class="container">
 
-<h1>Register</h1>
+          <h1>Create a Blood Request</h1>
 
-<form method="POST">
-	{% csrf_token %}
+          <form method="POST" class="form-horizontal">
+        	{% csrf_token %}
 
-	{{form.as_p}}
-	<button type="submit">Post</button>
 
-</form>
+                <fieldset>
+
+                <!-- Form Name -->
+                    <legend></legend>
+
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                      <label class="col-md-2 control-label" for="name">Name</label>  
+                      <div class="col-md-4">
+                      <input id="id_{{ form.name.name}}" name="{{ form.name.name}}" type="text" placeholder="Enter your Name" class="form-control input-md" required=""  default="">
+                        
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-md-2 control-label" for="name">Contact</label>  
+                      <div class="col-md-4">
+                      <input id="id_{{ form.contact.name}}" name="{{ form.contact.name}}" type="text" placeholder="Enter your Contact No" class="form-control input-md" required=""  default="">
+                        
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-md-2 control-label" for="name">Units</label>  
+                      <div class="col-md-4">
+                      <input id="id_{{ form.units.name}}" name="{{ form.units.name}}" type="text" placeholder="Enter No of Units" class="form-control input-md" required=""  default="">
+                        
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-md-2 control-label" for="name">Particulars</label>  
+                      <div class="col-md-4">
+                      <input id="id_{{ form.particular.name}}" name="{{ form.particular.name}}" type="text" placeholder="Enter any Particulars" class="form-control input-md" required=""  default="">
+                        
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-md-2 control-label" for="name">Date of Need (YYYY-MM-DD)</label>  
+                      <div class="col-md-4">
+                      <input id="id_{{ form.date_of_request.name}}" name="{{ form.date_of_request.name}}" type="text" placeholder="Date of Need" class="form-control input-md" required=""  default="">
+                        
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+  					<label class="col-md-2 control-label" for="street">District</label>  
+  					<div class="col-md-4">
+					  					{{ form.district }}
+					  </div>
+					</div>
+                    <div class="form-group">
+  					<label class="col-md-2 control-label" for="street">Blood Group</label>  
+  					<div class="col-md-4">
+					  					{{ form.blood }}
+					  </div>
+					</div>
+                    
+                    <!-- Button -->
+                    <div class="form-group">
+                      <label class="col-md-2 control-label" for="submit"></label>
+                      <div class="col-md-4">
+                        <button id="submit" name="submit" class="btn btn-primary">Post</button>
+                      </div>
+                    </div>
+
+
+              </fieldset>
+        </form>
+
 </div>
 
 {% endblock %}
