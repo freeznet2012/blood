@@ -1,66 +1,101 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8">
-      <div class = 'jumbotron'>
-      <h2>About Us</h2>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-      </div>
-     
 
-    </div>  
-    <div class="container col-sm-4">
-      <!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-        <form method = "POST" class="form-signin">
-          {% csrf_token %}
-          <h2 class="form-signin-heading">Login</h2>
-          <label for="input" class="sr-only">Username</label>
-          <input type="" id="inputUsername" class="form-control" placeholder="Username" required="" autofocus="">
-          <label for="inputPassword" class="sr-only">Password</label>
-          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-          <!--<div class="checkbox">
-            <label>
-              <input type="checkbox" value="remember-me"> Remember me
-            </label> -->
-          <!--</div>
-          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-          
-        </form>
-
+  <title>About US</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;      
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
 
 
-      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-      <script src="./Signin Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
-    
+  .nav-tabs li a {
+      color: #777;
+  }
+  
+
+
+
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+
+
+
+
+<div id="band" class="container text-center">
+  <h3>ABOUT US..!</h3>
+  
+  <p>We have created a functional website for online blood management.Using this website it is very easy to request the required blood group.We can either contact a red ribbon club or contact the donors individually.This website is very helpfull those who are willing to donate blood and those who are in need
+
+  We have spend a considerable amount of time working with this website
+  We are thankfull to all who supported us.We would like to specially thank one of our collegue Jithin A and our senior Eldho Joy for his valuable support.</p>
+  <br>
+
+
+
+  
+
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+
+  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Melvin</a></li>
+    <li><a data-toggle="tab" href="#menu1">Praveen</a></li>
+    <li><a data-toggle="tab" href="#menu2">Remya</a></li>
+    <li><a data-toggle="tab" href="#menu3">Varghese</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>Melvin James</h2>
+      <p>"Write now i am busy coding..:p"</p>
     </div>
-
-  </div>
-  <div class="row">
-    <div class="col-sm-8">
-      <div class="jumbotron">
-        <h2>Developers</h2>
-        <h5>Melvin James</h5>
-        <h5>Praveen Benny</h5>
-        <h5>Remya R T</h5>
-        <h5>Varghese Thomas</h5>
-
-
-      </div>
-    </div>  
-    <div class="container col-sm-4">
-    
-
-        
-
-
-      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-      <script src="./Signin Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
-      </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>Praveen Benny</h2>
+      <p>"Come on everyone...let's code!"</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>Remya RT</h2>
+      <p>"I am a girl who fell in love with coding"</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h2>Varghese Thomas</h2>
+      <p>"Coding is an art and i just love it"</p>
     </div>
 
   </div>
 </div>
+
+
+
+</body>
+</html>
+
 {% endblock content %}
