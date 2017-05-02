@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 def home(request):
 	user = request.user
 	if request.method == "POST":
-			#uform = UserForm(request.POST)
+			uform = UserForm(request.POST)
 			pform = DonorProfileForm(request.POST)
 			if pform.is_valid():
 				#user.username = uform.cleaned_data['username']

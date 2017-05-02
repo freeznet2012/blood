@@ -2,11 +2,70 @@
 
 {% block content %}
 
-<form method="post">
+
+<form method="post" class="form-horizontal">
 	{% csrf_token %}
 
-    {{ pform.as_p }}
-    <input type="submit" ...>
+<fieldset>
+
+<!-- Form Name -->
+<legend>Camp</legend>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-2 control-label" for="name">Name</label>  
+  <div class="col-md-4">
+  <input id="id_{{ pform.name.name}}" name="{{ pform.name.name}}" type="text" placeholder="Enter your name" class="form-control input-md" required="" value="{{ pform.name.value}}" default="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-2 control-label" for="contact">Contact no.</label>  
+  <div class="col-md-4">
+  <input id="id_{{ pform.contact.name}}" name="{{ pform.contact.name}}" type="text" placeholder="Enter your contact no." class="form-control input-md" required="" value="{{ pform.contact.value}}">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-2 control-label" for="street">Address</label>  
+  <div class="col-md-4">
+  <input id="id_{{ pform.address.name}}" name="{{ pform.address.name}}" type="text" placeholder="Enter Address" class="form-control input-md" required="" value="{{ pform.address.value}}">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-2 control-label" for="date">Date (YYYY-MM-DD)</label>  
+  <div class="col-md-4">
+  <input id="id_{{ pform.date.name}}" name="{{ pform.date.name}}" type="text" placeholder="Enter Date" class="form-control input-md" required="" value="{{ pform.date.value}}">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-2 control-label" for="street">District</label>  
+  <div class="col-md-4">
+  {{ pform.district }}
+  </div>
+</div>
+    
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-2 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button id="submit" name="submit" class="btn btn-primary">Update</button>
+  </div>
+</div>
+
+
+</fieldset>
+
+
 </form>
 	
 {% endblock content %}

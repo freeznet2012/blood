@@ -43,7 +43,7 @@ def register_donor(request):
 		form = DonorRegistrationForm()
 		
 		return render(request,
-	        'reg_form.html',
+	        'reg_form1.html',
 	        context={'form':form}
 	    )
 
@@ -74,7 +74,7 @@ def register_rrc(request):
 		args = {'form':form}
 		return render(request,
 	        'reg_form.html',
-	        context={'form':form}
+	        context={'form1':form}
 	    )
 
 

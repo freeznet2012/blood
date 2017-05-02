@@ -2,11 +2,124 @@
 
 {% block content %}
 
-<form method="post">
+
+<form method="post" class="form-horizontal">
 	{% csrf_token %}
-    {{ uform.as_p }}
-    {{ pform.as_p }}
-    <input type="submit" ...>
+
+<fieldset>
+
+<!-- Form Name -->
+<legend>Update Profile</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-2 control-label" for="name">Username</label>  
+  <div class="col-md-4">
+  <input id="id_{{ uform.username.name}}" name="{{ uform.username.name}}" type="text" placeholder="Enter your name" class="form-control input-md" required="" value="{{ uform.username.value}}" disabled="true">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-2 control-label" for="email">Email</label>  
+  <div class="col-md-4">
+  <input id="id_{{ uform.email.name}}" name="{{ uform.email.name}}" type="text" placeholder="Enter your Email" class="form-control input-md" required="" value="{{ uform.email.value}}" disabled="true">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-2 control-label" for="name">Name</label>  
+  <div class="col-md-4">
+  <input id="id_{{ pform.name.name}}" name="{{ pform.name.name}}" type="text" placeholder="Enter your name" class="form-control input-md" required="" value="{{ pform.name.value}}">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-2 control-label" for="contact">Contact no.</label>  
+  <div class="col-md-4">
+  <input id="id_{{ pform.contact.name}}" name="{{ pform.contact.name}}" type="text" placeholder="Enter your contact no." class="form-control input-md" required="" value="{{ pform.contact.value}}">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-2 control-label" for="street">Address</label>  
+  <div class="col-md-4">
+  <input id="id_{{ pform.address.name}}" name="{{ pform.address.name}}" type="text" placeholder="Enter your street" class="form-control input-md" required="" value="{{ pform.address.value}}">
+    
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-2 control-label" for="street">Pincode</label>  
+  <div class="col-md-4">
+  <input id="id_{{ pform.pincode.name}}" name="{{ pform.pincode.name}}" type="text" placeholder="Enter your street" class="form-control input-md" required="" value="{{ pform.pincode.value}}">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-2 control-label" for="street">Weight</label>  
+  <div class="col-md-4">
+  <input id="id_{{ pform.weight.name}}" name="{{ pform.weight.name}}" type="text" placeholder="Enter your street" class="form-control input-md" required="" value="{{ pform.weight.value}}">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-2 control-label" for="street">DOB (YYYY-MM-DD) </label>  
+  <div class="col-md-4">
+  <input id="id_{{ pform.dob.name}}" name="{{ pform.dob.name}}" type="text" placeholder="Enter your street" class="form-control input-md" required="" value="{{ pform.dob.value}}">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-2 control-label" for="street">Last Donated (YYYY-MM-DD) </label>  
+  <div class="col-md-4">
+  <input id="id_{{ pform.last_donated.name}}" name="{{ pform.last_donated.name}}" type="text" placeholder="Enter your street" class="form-control input-md" required="" value="{{ pform.last_donated.value}}">
+    
+  </div>
+</div>
+
+
+</div><div class="form-group">
+  <label class="col-md-2 control-label" for="street">Gender</label>  
+  <div class="col-md-4">
+  {{ pform.gender }}
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-2 control-label" for="street">District</label>  
+  <div class="col-md-4">
+  {{ pform.district }}
+  </div>
+
+
+</div><div class="form-group">
+  <label class="col-md-2 control-label" for="street">Blood</label>  
+  <div class="col-md-4">
+  {{ pform.blood }}
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-2 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button id="submit" name="submit" class="btn btn-primary">Update</button>
+  </div>
+</div>
+</fieldset>
+
+
 </form>
-	
 {% endblock content %}
