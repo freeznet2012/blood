@@ -73,8 +73,8 @@ def register_rrc(request):
 		form = RrcRegistrationForm()
 		args = {'form':form}
 		return render(request,
-	        'reg_form.html',
-	        context={'form1':form}
+	        'reg_form1.html',
+	        context={'form':form}
 	    )
 
 
