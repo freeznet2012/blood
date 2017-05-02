@@ -1,12 +1,55 @@
 {%extends 'base.html' %}
-{% block title %}Login{% endblock %}
 
 {% block content %}
-  <h2>Login</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button class="btn btn-primary" type="submit">Submit          </button>
-	<a href="/account/password_reset" class="btn btn-primary">Password Reset</a>
-  </form>
+
+
+<div class="container">
+
+          <h1>Login</h1>
+
+          <form method="POST" class="form-horizontal">
+        	{% csrf_token %}
+
+
+                <fieldset>
+
+                <!-- Form Name -->
+                    <legend></legend>
+
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                      <label class="col-md-2 control-label" for="username">Username</label>  
+                      <div class="col-md-4">
+                      <input id="id_{{ form.username.name}}" name="{{ form.username.name}}" type="text" placeholder="Enter your Username" class="form-control input-md" required=""  default="">
+                        
+                      </div>
+                    </div>
+
+                    
+                    <!-- Text input-->
+                    <div class="form-group">
+                      <label class="col-md-2 control-label" for="street"> Password</label>  
+                      <div class="col-md-4">
+                      <input id="id_{{ form.email.password2}}" name="{{ form.password.name}}" type="password" placeholder=" Password" class="form-control input-md" required="" >
+                        
+                      </div>
+                    </div>
+                    <!-- Button -->
+                    <div class="form-group">
+                      <label class="col-md-2 control-label" for="submit"></label>
+                      <div class="col-md-1">
+                        <button id="submit" name="submit" class="btn btn-primary">Login</button>
+                      </div>
+                      <a href="/account/password_reset" class="btn btn-primary">Password Reset</a>
+                    </div>
+
+                                        <!-- Button -->
+
+              </fieldset>
+        </form>
+
+</div>
+
+
 {% endblock %}
